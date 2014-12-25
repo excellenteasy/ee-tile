@@ -1,0 +1,59 @@
+{
+  "name": "boilerplate-angular-component",
+  "version": "1.0.0",
+  "description": "An angular component boilerplate",
+  "main": "index.js",
+  "style": "index.css",
+  "config": {
+    "lrport": 35729,
+    "port": 8080,
+    "host": "0.0.0.0"
+  },
+  "scripts": {
+    "ify": "browserify index.es6 -t 6to5-browserify -t brfs",
+    "clean": "rm -rf dist && mkdir dist",
+    "prebuild": "npm run clean",
+    "build": "npm run ify -s > dist/index.js",
+    "predist": "npm run build",
+    "dist": "npm run ify -s -- -t browserify-ngannotate | uglifyjs -c > dist/index.min.js",
+    "publish": "npm run dist",
+    "pretest": "6to5 index.es6 > $npm_package_main",
+    "test": "tape test.js | tap-spec",
+    "watch": "onchange 'index.es6' -- npm test",
+    "watchify": "watchify index.es6 -t 6to5-browserify -t brfs -o dist/index.js",
+    "livereload": "lrhs -b -w example/index.html,index.css,index.js -l $npm_package_config_lrport",
+    "open": "opener http://$npm_package_config_host:$npm_package_config_port/example",
+    "serve": "npm run open -s & parallelshell 'npm run watch -s' 'npm run watchify -s' 'npm run livereload -s'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/excellenteasy/boilerplate-angular-component.git"
+  },
+  "keywords": [
+    "angular",
+    "ng",
+    "directive"
+  ],
+  "author": "Stephan Bönnemann <stephan@excellenteasy.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/excellenteasy/boilerplate-angular-component/issues"
+  },
+  "homepage": "https://github.com/excellenteasy/boilerplate-angular-component",
+  "devDependencies": {
+    "6to5": "^1.14.17",
+    "6to5-browserify": "^1.4.0",
+    "brfs": "^1.2.0",
+    "browserify": "^7.0.0",
+    "browserify-ngannotate": "^0.4.0",
+    "lr-http-server": "^0.1.1",
+    "onchange": "0.0.2",
+    "opener": "^1.4.0",
+    "parallelshell": "^1.0.0",
+    "serve-static": "^1.7.1",
+    "tap-spec": "^2.1.1",
+    "tape": "^3.0.3",
+    "uglify-js": "^2.4.15",
+    "watchify": "^2.1.1"
+  }
+}

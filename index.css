@@ -1,0 +1,7 @@
+component > ul > li {
+  background: green;
+}
+
+component > ul > li:nth-child(odd) {
+  background: yellow;
+}
