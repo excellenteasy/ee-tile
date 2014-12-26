@@ -1,11 +1,11 @@
 import {readFileSync} from 'fs'
 
-export default function component(module) {
-  module.directive('component', directive)
+export default function eeTile(module) {
+  module.directive('eeTile', directive)
 }
 
 if ('angular' in global) {
-  component(angular.module('component', []))
+  eeTile(angular.module('eeTile', []))
 }
 
 export function directive() {
@@ -13,7 +13,7 @@ export function directive() {
     scope: {
       items: '='
     },
-    restrict: 'ACE',
+    restrict: 'AE',
     controller: ctrl,
     controllerAs: 'ctrl',
     template: readFileSync(__dirname + '/template.html', 'utf8')
