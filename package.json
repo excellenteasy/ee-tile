@@ -59,5 +59,9 @@
     "tape": "^3.0.3",
     "uglify-js": "^2.4.15",
     "watchify": "davidpfahler/watchify"
+  },
+  "dependencies": {
+    "html-ellipsis": "^1.1.0",
+    "textfit": "^2.1.1"
   }
 }

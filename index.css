@@ -1,7 +1,33 @@
-component > ul > li {
-  background: green;
+ee-tile {
+  width: 100%;
+  box-sizing: border-box;
+  font-family: Helvetica;
 }
 
-component > ul > li:nth-child(odd) {
-  background: yellow;
+ee-tile * {
+  box-sizing: border-box;
+}
+
+ee-tile .ee-tile-main {
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%;
+}
+
+ee-tile .ee-tile-main .ee-tile-content {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px;
+  font-size: 10pt;
+}
+
+ee-tile .ee-tile-bottom-bar {
+  height: 40px;
+  font-size: 15pt;
+  line-height: 40px;
+  padding: 0 10px;
 }

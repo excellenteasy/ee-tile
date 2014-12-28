@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="eeTile">
+  <head>
+    <meta charset="utf-8">
+    <title>ee-tile example</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+    <link rel="stylesheet" href="../index.css" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <style>
+    html, body, .container {
+      height: 100%;
+      min-height: 100%;
+      margin: 0;
+    }
+
+    ee-tile {
+      padding-bottom: 6px;
+    }
+    ee-tile:nth-child(even) {
+     padding-left: 3px;
+    }
+    ee-tile:nth-child(odd) {
+     padding-right: 3px;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="container pure-g">
+      <ee-tile class="pure-u-1-2" options="{image: 'abp.png', barText: 'bar', bar: 'green'}"></ee-tile>
+      <ee-tile class="pure-u-1-2" options="{text: 'Cupidatat sint aliquip eu dolore aute voluptate laborum aliquip ullamco fugiat commodo sunt. Et amet nulla eiusmod ut cupidatat excepteur non ut laborum.', background: 'red', barText: 'bar', bar: 'green'}"></ee-tile>
+      <ee-tile class="pure-u-1-2" options="{text: 'Cupidatat sint aliquip eu dolore aute voluptate laborum aliquip ullamco', background: 'red', barText: 'bar', bar: 'green'}"></ee-tile>
+      <ee-tile class="pure-u-1-2" options="{text: 'Ut incididunt laboris non irure irure officia sit dolore. Laboris anim commodo non sit dolor qui amet amet irure qui ullamco mollit nulla sit. Eiusmod cillum labore sit velit aute ex officia fugiat. E', background: 'red', barText: 'bar', bar: 'green'}"></ee-tile>
+      <ee-tile class="pure-u-1-2" options="{text: 'foo', background: 'red', barText: 'bar', bar: 'green'}"></ee-tile>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular.js"></script>
+    <script src="../dist/index.js"></script>
+  </body>
+</html>
