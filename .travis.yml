@@ -5,3 +5,7 @@ notifications:
   email: false
   slack:
     secure: Ybp/HZgkp2t7rdi1ArU5eVPAo4CqO/E/6QX+vQnLb+WRuGbyaeyPP9qemHipVfLmOqbujtZ9byJlB7q1BFIyOcLZ0fwhCWe/1l2XHV1rILoXz1nKhZQBpxEYuyrm6w1FpNOv0nM3PGxUImbzqhWHzyo1h69P3sPZzr9YCH7bnx8=
+cache:
+  directories:
+  - node_modules
+sudo: false
