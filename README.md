@@ -14,7 +14,7 @@
 
 ## Usage
 
-```javascript
+```html
 <script src="ee-tile.js"></script>
 <script>
 // Add eeTile as dependency to your module definition
