@@ -10,7 +10,7 @@
 
 > Height of the component is dependening on the width, as the main area will always be a square.
 
-![ee-media-tile-abp](https://cloud.githubusercontent.com/assets/908242/5778778/0930e2d0-9d9e-11e4-91e8-d0259ef41d25.png)
+![ee-media-tile-abp](https://cloud.githubusercontent.com/assets/908242/5782416/02fb453c-9dbb-11e4-95e1-4de615a02fe8.png)
 
 ## Usage
 
