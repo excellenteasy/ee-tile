@@ -1,3 +1,9 @@
-<ul>
-  <li ng-repeat="item in ctrl.items">{{item}}</li>
-</ul>
+<div class="ee-tile-main" ng-style="ctrl.mainStyle">
+  <div class="ee-tile-content">
+    {{ctrl.options.text}}
+  </div>
+</div>
+<div class="ee-tile-bottom-bar" ng-style="ctrl.barStyle" ng-if="ctrl.barRendered">
+  {{ctrl.options.barText}}
+</div>
+<!-- <i class="ee-tile-icon" ng-if="ctrl.options.icon" class="{{ctrl.options.icon}}"></i> -->
