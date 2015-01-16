@@ -1,10 +1,12 @@
 ee-tile {
-  box-sizing: border-box;
   font-family: Helvetica;
 }
 
-ee-tile .ee-tile-main {
+ee-tile, ee-tile .ee-tile-main, ee-tile .ee-tile-content, ee-tile .ee-tile-bottom-bar {
   box-sizing: border-box;
+}
+
+ee-tile .ee-tile-main {
   position: relative;
   width: 100%;
 }
