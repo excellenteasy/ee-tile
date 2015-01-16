@@ -1,25 +1,31 @@
 ee-tile {
-  width: 100%;
-  box-sizing: border-box;
   font-family: Helvetica;
 }
 
-ee-tile .ee-tile-main {
+ee-tile, ee-tile .ee-tile-main, ee-tile .ee-tile-content, ee-tile .ee-tile-bottom-bar {
   box-sizing: border-box;
+}
+
+ee-tile .ee-tile-main {
   position: relative;
   width: 100%;
-  padding-bottom: 100%;
+}
+
+ee-tile .ee-tile-main:before {
+  content: "";
+  display: block;
+  padding-top: 100%;
 }
 
 ee-tile .ee-tile-main .ee-tile-content {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
   padding: 10px;
-  font-size: 10pt;
+  font-size: 10px;
 }
 
 ee-tile .ee-tile-bottom-bar {
