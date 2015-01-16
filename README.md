@@ -111,4 +111,4 @@ This is build using npm scripts.
 
 `npm test` runs the tests.
 
-`npm run watch` executes `npm test` when `index.js` changes.
+`npm run watch` executes `npm test` when `index.es6` changes.
