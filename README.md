@@ -8,9 +8,9 @@
 
 ## Visual examples
 
-> TODO: To replaced with screenshots of the actual component. These are mock-ups:
+> Height of the component is dependening on the width, as the main area will always be a square.
 
-![ee-media-tile-abp](https://cloud.githubusercontent.com/assets/908242/5564191/e263fc8a-8eae-11e4-9826-6b9c6095528b.png)
+![ee-media-tile-abp](https://cloud.githubusercontent.com/assets/908242/5778778/0930e2d0-9d9e-11e4-91e8-d0259ef41d25.png)
 
 ## Usage
 
