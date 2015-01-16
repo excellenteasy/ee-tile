@@ -27,7 +27,11 @@ ee-tile .ee-tile-main .ee-tile-content {
 
 ee-tile .ee-tile-bottom-bar {
   height: 40px;
-  font-size: 15pt;
+  font-size: 11pt;
   line-height: 40px;
   padding: 0 10px;
+  display: block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
