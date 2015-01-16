@@ -29,7 +29,7 @@ export function directive($timeout) {
             maxFontSize: 100
           }
           textfit(el, settings)
-        }, 50)
+        })
       }
       if (options.ellipsis !== false) {
         let count = 150
@@ -43,7 +43,7 @@ export function directive($timeout) {
           if (ellipsed.length < html.length)  {
             content.innerHTML = ellipsed
           }
-        }, 50)
+        })
       }
     }
   }
