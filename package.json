@@ -14,7 +14,7 @@
     "clean": "rm -rf dist && mkdir dist",
     "prebuild": "npm run clean",
     "build": "npm run ify -s > dist/index.js",
-    "predist": "npm run build",
+    "predist": "npm test && npm run build",
     "dist": "npm run ify -s -- -t browserify-ngannotate | uglifyjs -c > dist/index.min.js",
     "publish": "npm run dist",
     "pretest": "6to5 index.es6 > $npm_package_main",
