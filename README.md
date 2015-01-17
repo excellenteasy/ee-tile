@@ -14,12 +14,21 @@
 
 ## Usage
 
+With a `script` tag:
+
 ```html
 <script src="ee-tile.js"></script>
 <script>
 // Add eeTile as dependency to your module definition
 var app = angular.module('YourApp', ['eeTile']);
 </script>
+```
+
+Using browserify:
+
+```javascript
+var app = angular.module('myApp', [])
+require('ee-tile')
 ```
 
 ## API
