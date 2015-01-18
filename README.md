@@ -14,7 +14,7 @@
 
 ## Usage
 
-With a `script` tag:
+[Using a `script` tag](https://github.com/excellenteasy/ee-tile/tree/master/examples):
 
 ```html
 <script src="ee-tile.js"></script>
@@ -24,11 +24,13 @@ var app = angular.module('YourApp', ['eeTile']);
 </script>
 ```
 
-Using browserify:
+[Using browserify](https://github.com/excellenteasy/ee-tile/tree/master/examples/browserify):
+
+> You need to browserify your source code with the [`brfs`](https://github.com/substack/brfs) transform, if you require ee-tile from [`index.js`](https://github.com/excellenteasy/ee-tile/blob/master/package.json#L5) source.
 
 ```javascript
 var app = angular.module('myApp', [])
-require('ee-tile')
+require('ee-tile')(app)
 ```
 
 ## API
