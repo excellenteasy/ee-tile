@@ -1,6 +1,5 @@
 # ee-tile
 [![Build Status](https://travis-ci.org/excellenteasy/ee-tile.svg?branch=master)](https://travis-ci.org/excellenteasy/ee-tile)
-[![Code Climate](https://codeclimate.com/github/excellenteasy/ee-tile/badges/gpa.svg)](https://codeclimate.com/github/excellenteasy/ee-tile)
 [![Dependency Status](https://david-dm.org/excellenteasy/ee-tile.svg)](https://david-dm.org/excellenteasy/ee-tile)
 [![devDependency Status](https://david-dm.org/excellenteasy/ee-tile/dev-status.svg)](https://david-dm.org/excellenteasy/ee-tile#info=devDependencies)
 

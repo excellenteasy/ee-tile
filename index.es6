@@ -11,6 +11,33 @@ if ('angular' in global) {
 }
 
 export function directive($timeout) {
+  function link(scope, element) {
+    let options = scope.options
+    if (options.fitText !== false) {
+      $timeout(() => {
+        let el = element[0].querySelector('.ee-tile-content')
+        let settings = {
+          minFontSize: 10,
+          maxFontSize: 100
+        }
+        textfit(el, settings)
+      })
+    }
+    if (options.ellipsis === false) return
+    let count = 150
+    if (typeof scope.options.ellipsis === 'number') {
+      count = scope.options.ellipsis
+    }
+    $timeout(() => {
+      let content = element[0].querySelector('.ee-tile-content')
+      let html = content.innerHTML
+      let ellipsed = ellipsis(html, count)
+      if (ellipsed.length < html.length)  {
+        content.innerHTML = ellipsed
+      }
+    })
+  }
+
   return {
     scope: {
       options: '&'
@@ -19,33 +46,7 @@ export function directive($timeout) {
     controller: ctrl,
     controllerAs: 'ctrl',
     template: readFileSync(__dirname + '/template.html', 'utf8'),
-    link: function(scope, element) {
-      let options = scope.options
-      if (options.fitText !== false) {
-        $timeout(function() {
-          let el = element[0].querySelector('.ee-tile-content')
-          let settings = {
-            minFontSize: 10,
-            maxFontSize: 100
-          }
-          textfit(el, settings)
-        })
-      }
-      if (options.ellipsis !== false) {
-        let count = 150
-        if ('number' === typeof scope.options.ellipsis) {
-          count = scope.options.ellipsis
-        }
-        $timeout(function() {
-          let content = element[0].querySelector('.ee-tile-content')
-          let html = content.innerHTML
-          let ellipsed = ellipsis(html, count)
-          if (ellipsed.length < html.length)  {
-            content.innerHTML = ellipsed
-          }
-        })
-      }
-    }
+    link: link
   }
 }
 
@@ -77,7 +78,7 @@ export function getMainStyles(options = {}) {
 export function getBarStyles(options = {}) {
   let background = options.bar
 
-  if ('string' !== typeof background) {
+  if (typeof background !== 'string') {
     return {}
   }
   return {
