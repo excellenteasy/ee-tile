@@ -22,7 +22,7 @@
     "watch": "onchange 'index.es6' -- npm test",
     "watchify": "watchify index.es6 -t 6to5ify -t brfs -o dist/index.js",
     "livereload": "lrhs -b -w example/index.html,index.css,index.js -l $npm_package_config_lrport",
-    "open": "opener http://$npm_package_config_host:$npm_package_config_port/example",
+    "open": "opener http://$npm_package_config_host:$npm_package_config_port/examples",
     "serve": "npm run open -s & parallelshell 'npm run watch -s' 'npm run watchify -s' 'npm run livereload -s'"
   },
   "repository": {
