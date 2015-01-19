@@ -62,5 +62,11 @@
   "dependencies": {
     "html-ellipsis": "^1.1.0",
     "textfit": "^2.1.1"
+  },
+  "browserify": {
+    "transform": [
+      "brfs",
+      "browserify-ngannotate"
+    ]
   }
 }
